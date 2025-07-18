@@ -1,0 +1,152 @@
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  text-align: center;
+  padding: 25px;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header h1 {
+  color: #1982c4;
+  font-family: "Indie Flower";
+  font-size: 4rem;
+  margin: 30px;
+
+  background-image: url(./images/cloud.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  padding: 70px 90px;
+
+  filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.1));
+  animation: float 3s ease-in-out infinite;
+}
+
+h2 {
+  color: #ff595e;
+  font-size: 1.5rem;
+}
+
+#buttons {
+  margin: 25px 0;
+  font-family: "Indie Flower";
+  color: #6a4c93;
+  padding: 10px;
+  gap: 15px;
+}
+
+#buttons button {
+  font-size: 1.5rem;
+  padding: 15px 10px;
+  margin: 5px;
+  background-color: #ffca3a;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 0 #727070;
+}
+
+#buttons button:hover {
+  background-color: #8ac926;
+  transform: translateY(4px);
+  box-shadow: 0 7px 0 #7ab522;
+  color: white;
+}
+
+#buttons button i {
+  margin-right: 8px;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+#buttons button:hover i {
+  transform: scale(1.2);
+}
+
+.book,
+.farm,
+.alien,
+.butterfly {
+  position: fixed;
+  z-index: 10;
+  width: clamp(60px, 10vw, 120px);
+  pointer-events: none;
+}
+
+.book {
+  top: 5%;
+  right: 3%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.farm {
+  top: 15%;
+  left: 3%;
+  animation: float 4s ease-in-out infinite 1s;
+}
+
+.alien {
+  bottom: 15%;
+  right: 3%;
+  transition: transform 0.3s;
+  pointer-events: auto;
+}
+
+.butterfly {
+  bottom: 20%;
+  left: 3%;
+  transition: transform 0.3s;
+  pointer-events: auto;
+}
+
+.alien:hover {
+  transform: rotate(-15deg) scale(1.2);
+  cursor: pointer;
+}
+
+.butterfly:hover {
+  transform: rotate(15deg) scale(1.2);
+  cursor: pointer;
+}
+
+#story-output {
+  margin: 20px auto;
+  max-width: 800px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  white-space: pre-wrap;
+  text-align: center;
+  color: #6a4c93;
+  /* color: #3e3d3d; */
+}
+
+#story-output strong {
+  display: block;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 700px) {
+  .farm,
+  .book {
+    display: none;
+  }
+
+  .alien {
+    bottom: 10%;
+    right: 2%;
+  }
+
+  .butterfly {
+    bottom: 10%;
+    left: 2%;
+  }
+}

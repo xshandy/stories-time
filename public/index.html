@@ -3,30 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/451aaf5c7b.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Stories-Time</title>
   </head>
   <body>
     <header>
-      <h1>StoryTime</h1>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl">StoryTime</h1>
     </header>
     <main>
-      <p>Pick a story theme:</p>
+      <h2>Pick a story theme:</h2>
 
       <div id="buttons">
-        <button onclick="getStory('unicorns')">Unicorns</button>
-        <button onclick="getStory('monsters')">Monsters</button>
-        <button onclick="getStory('aliens')">Aliens</button>
-        <button onclick="getStory('princesses')">Princesses</button>
-        <button onclick="getStory('farm')">Farm</button>
-        <button onclick="getStory('space')">Space</button>
+        <button onclick="getStory('unicorn')">
+          Unicorn <i class="fa-solid fa-horse"></i>
+        </button>
+        <button onclick="getStory('monster')">
+          Monster <i class="fa-solid fa-skull"></i>
+        </button>
+        <button onclick="getStory('alien')">
+          Alien <i class="fa-brands fa-reddit-alien"></i>
+        </button>
+        <button onclick="getStory('princess')">
+          Princess
+          <i class="fa-solid fa-child-dress"></i>
+        </button>
+        <button onclick="getStory('farm')">
+          Farm
+          <i class="fa-solid fa-tractor"></i>
+        </button>
+        <button onclick="getStory('space')">
+          Space
+          <i class="fa-solid fa-rocket"></i>
+        </button>
       </div>
 
-      <h2>Story</h2>
-      <div>
-        <p id="story-output"></p>
+      <div
+        id="loading-spinner"
+        class="flex justify-center items-center py-10 hidden"
+      >
+        <svg
+          class="animate-spin h-8 w-8 text-orange-400"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8v8z"
+          ></path>
+        </svg>
       </div>
+
+      <div
+        id="story-output"
+        class="text-center max-w-2xl mx-auto text-lg leading-relaxed text-gray-800"
+      ></div>
     </main>
+    <img src="./images/alien.png" alt="alien" class="alien" />
+    <img src="./images/butterfly.png" alt="butterfly" class="butterfly" />
+    <img src="./images/book.png" alt="book" class="book" />
+    <img src="./images/farm.png" alt="farm" class="farm" />
     <footer></footer>
     <script src="index.js"></script>
   </body>
