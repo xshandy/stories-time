@@ -4,12 +4,19 @@
   font-style: normal;
 }
 
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   text-align: center;
   padding: 25px;
   background-color: white;
   position: relative;
   overflow-x: hidden;
+  font-family: "Comic Relief";
 }
 
 header h1 {
@@ -30,8 +37,20 @@ header h1 {
 }
 
 h2 {
-  color: #ff595e;
+  font-family: "Comic Relief";
+  color: #8ac926;
   font-size: 1.5rem;
+  animation: breathe 5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 #buttons {
@@ -132,6 +151,23 @@ h2 {
   display: block;
   font-weight: bold;
   font-size: 1.6rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 10px;
+  color: rgb(144, 143, 143);
+}
+
+footer a {
+  color: #8ac926;
 }
 
 @media (max-width: 700px) {
