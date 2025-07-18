@@ -2,6 +2,9 @@
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.6.0",
     "axios": "^1.10.0",
-    "cohere-ai": "^7.17.1"
+    "cohere-ai": "^7.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0"
   }
 }

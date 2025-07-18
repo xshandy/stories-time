@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Stories-Time</title>
+  </head>
+  <body>
+    <header>
+      <h1>StoryTime</h1>
+    </header>
+    <main>
+      <p>Pick a story theme:</p>
+
+      <div id="buttons">
+        <button onclick="getStory('unicorns')">Unicorns</button>
+        <button onclick="getStory('monsters')">Monsters</button>
+        <button onclick="getStory('aliens')">Aliens</button>
+        <button onclick="getStory('princesses')">Princesses</button>
+        <button onclick="getStory('farm')">Farm</button>
+        <button onclick="getStory('space')">Space</button>
+      </div>
+
+      <h2>Story</h2>
+      <div>
+        <p id="story-output"></p>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
