@@ -5,11 +5,11 @@ const axios = require("axios");
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 const VOICE_ID = "XXphLKNRxvJ1Qa95KBhX";
 
-router.post("/read", async (req, res) => {
-  const { text } = req.body;
+router.post("/read", async (request, response) => {
+  const { text } = request.body;
 
   try {
-    const response = await axios.post(
+    const responseData = await axios.post(
       `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
       {
         text,
@@ -29,12 +29,12 @@ router.post("/read", async (req, res) => {
       }
     );
 
-    res.set({
+    response.set({
       "Content-Type": "audio/mpeg",
       "Content-Length": response.data.length,
     });
 
-    res.send(response.data);
+    response.send(responseData.data);
   } catch (err) {
     const raw = err?.response?.data;
     if (Buffer.isBuffer(raw)) {
@@ -43,7 +43,7 @@ router.post("/read", async (req, res) => {
     } else {
       console.error("ElevenLabs error:", err.message || err);
     }
-    res.status(500).json({ error: "Failed to generate audio" });
+    response.status(500).json({ error: "Failed to generate audio" });
   }
 });
 
