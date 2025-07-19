@@ -31,7 +31,7 @@ router.post("/read", async (request, response) => {
 
     response.set({
       "Content-Type": "audio/mpeg",
-      "Content-Length": response.data.length,
+      "Content-Length": responseData.data.length,
     });
 
     response.send(responseData.data);
