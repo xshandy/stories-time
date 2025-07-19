@@ -120,7 +120,7 @@ document.getElementById("stop-button").addEventListener("click", () => {
       const readButton = document.getElementById("read-button");
       const readButtonText = document.getElementById("read-button-text");
       readButton.disabled = false;
-      readButtonText.innerHTML = `🔊 Read the Story`;
+      readButtonText.innerHTML = `Read the Story Again`;
     }
 
     stopButtonText.innerHTML = `<i class="fa-solid fa-stop"></i> Stop`;
