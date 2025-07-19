@@ -15,6 +15,8 @@ app.use("/api", readRouter);
 
 app.post("/api/read", async (request, response) => {
   const { text } = request.body;
+  console.log("reading this text", text);
+  console.log("API key", !!process.env.ELEVEN_API_KEY);
   try {
     const readData = await axios({
       method: "POST",
