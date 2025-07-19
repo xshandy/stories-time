@@ -137,20 +137,77 @@ h2 {
 }
 
 #story-output {
-  margin: 20px auto;
+  margin: 25px auto;
+
   max-width: 800px;
   font-size: 1.4rem;
   line-height: 1.8rem;
   white-space: pre-wrap;
   text-align: center;
   color: #6a4c93;
-  /* color: #3e3d3d; */
 }
 
 #story-output strong {
   display: block;
   font-weight: bold;
   font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+#controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#controls button {
+  font-size: 1.1rem;
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+#read-button {
+  background-color: #ffca3a;
+}
+
+#read-button:hover {
+  background-color: #ffc94b;
+}
+
+#pause-button {
+  background-color: #ff595e;
+}
+
+#pause-button:hover {
+  background-color: #ff7478;
+}
+
+#resume-button {
+  background-color: #8ac926;
+}
+
+#resume-button:hover {
+  background-color: #9fda45;
+}
+
+#stop-button {
+  background-color: #1982c4;
+}
+
+#stop-button:hover {
+  background-color: #318ac2;
+}
+
+.button-row {
+  margin-top: 10px;
+}
+
+.button-row button {
+  display: inline-block;
 }
 
 footer {
