@@ -36,7 +36,13 @@ router.post("/read", async (req, res) => {
 
     res.send(response.data);
   } catch (err) {
-    console.error("Error generating audio:", err.response?.data || err.message);
+    const raw = err?.response?.data;
+    if (Buffer.isBuffer(raw)) {
+      const decoded = raw.toString("utf-8");
+      console.error("ElevenLabs error (decoded):", decoded);
+    } else {
+      console.error("ElevenLabs error:", err.message || err);
+    }
     res.status(500).json({ error: "Failed to generate audio" });
   }
 });
